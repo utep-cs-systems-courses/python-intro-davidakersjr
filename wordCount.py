@@ -1,3 +1,4 @@
+#! /usr/bin/env python3 #Add to every file
 import sys       
 import re         
 import os        
@@ -11,7 +12,7 @@ def wordCount(inputFile, outputFile):
         bit = os.stat(inF).st_size #finds size of file in byte form
         file =  os.read(inF, bit) #tells it to read x amount of bytes
 
-        outF = os.open(outputFile, os.O_RDWR)
+        outF = os.open(outputFile, os.O_RDWR)#trucncate next time
         pos = 0
         temp2 = ''
         temp = file.decode('utf-8')        
